@@ -37,6 +37,16 @@ app.get("/json", (req, res, next) => {
 	}
 });
 
+app.get('/now', (req, res, next) => {
+	req.time = new Date().toString();
+	next();},
+	(req, res) => {
+		res.json({time: req.time})
+	}
+)
+
+
+
 
 
 app.use('/public', express.static(__dirname + "/public"));
