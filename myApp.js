@@ -66,8 +66,8 @@ app.get('/name', (req, res) => {
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.post('/name', (req, res) => {
-	console.log(req.body);
 	let string = req.body.first + " " + req.body.last;
+	console.log(string);
 	res.json({name: string});
 });
 
