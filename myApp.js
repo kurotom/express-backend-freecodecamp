@@ -38,7 +38,7 @@ app.get("/json", (req, res, next) => {
 });
 
 app.get('/now', (req, res, next) => {
-		let req.time = new Date().toString();
+		req.time = new Date().toString();
 		next();
 	},
 	(req, res) => {
@@ -52,7 +52,7 @@ app.get('/:word/echo', (req, res) => {
 
 	console.log(parametros);
 
-	res.json({echo: parametros.word});
+	res.json({"echo": parametros.word});
 })
 
 
