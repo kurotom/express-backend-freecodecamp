@@ -48,12 +48,10 @@ app.get('/now', (req, res, next) => {
 
 
 app.get('/:word/echo', (req, res) => {
-	let parametros = req.params;
-
-	console.log(parametros);
-
-	res.json({"echo": parametros.word});
-})
+	const { word } = req.params;
+	console.log(word);
+	res.json({echo: word});
+});
 
 
 
